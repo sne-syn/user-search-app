@@ -1,0 +1,6 @@
+{
+  "htmlWhitespaceSensitivity": "css",
+  "printWidth": 130,
+  "semi": true,
+  "tabWidth": 2
+}
