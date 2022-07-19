@@ -1,0 +1,32 @@
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+
+/*=============================================
+=            Themed colors               =
+=============================================*/
+
+/* Dark Theme */
+$body-text-color: var(--dse-body-text-color, $white) !default;
+$body-bg-color: var(--dse-body-bg-color, $big-stone) !default;
+$card-bg-color: var(--dse-card-bg-color, $cloud-burst) !default;
+
+/* Light Theme */
+$body-text-color: var(--dse-body-text-color, $kashmir-blue) !default;
+$body-bg-color: var(--dse-body-bg-color, $white-dark) !default;
+$card-bg-color: var(--dse-card-bg-color, $white) !default;
+
+/*=============================================
+=                 Shared                     =
+=============================================*/
+
+$body-error-text-color: var(--dse-btn-primary-bg-hover, $red) !default;
+$btn-primary-color: var(--dse-btn-primary-color, $white) !default;
+$btn-primary-bg: var(--dse-btn-primary-bg, $blue) !default;
+$btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, $blue-light) !default;
