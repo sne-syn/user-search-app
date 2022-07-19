@@ -16,12 +16,8 @@
     }
   },
   "lint-staged": {
-    "***/*.scss": [
-      "eslint"
-    ],
-    "**/*.scss": [
-      "prettier --write",
-      "git add"
+    "*.scss": [
+      "npm run lint"
     ]
   },
   "keywords": [],
