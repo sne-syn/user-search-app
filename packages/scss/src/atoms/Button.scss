@@ -1,0 +1,27 @@
+@import "foundation/all";
+
+.dse-button__container {
+  @include font($fs-base, $lh-xs);
+
+  background: $btn-primary-bg;
+  border: none;
+  border-radius: $border-radius;
+  color: $btn-primary-color;
+  cursor: pointer;
+  display: flex;
+  font-family: $body-font-family;
+  font-style: normal;
+  font-weight: $fw-bold;
+  justify-content: center;
+  min-width: 106px;
+  padding: 5px map-get($spacing, "sm");
+
+  &:hover,
+  &:disabled {
+    background: $btn-primary-bg-hover;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
