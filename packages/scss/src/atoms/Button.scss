@@ -1,7 +1,7 @@
 @import "foundation/all";
 
 .dse-button__container {
-  @include font($fs-base, $lh-xs);
+  @include font($fs-xs, $lh-xxs);
 
   background: $btn-primary-bg;
   border: none;
@@ -9,12 +9,14 @@
   color: $btn-primary-color;
   cursor: pointer;
   display: flex;
-  font-family: $body-font-family;
-  font-style: normal;
+  font-family: inherit;
   font-weight: $fw-bold;
   justify-content: center;
-  min-width: 106px;
-  padding: 5px map-get($spacing, "sm");
+  min-width: 5.25rem;
+  min-height: 2.875rem;
+  padding: 0.313rem map-get($spacing, "sm");
+  align-items: center;
+  justify-content: baseline;
 
   &:hover,
   &:disabled {
@@ -23,5 +25,12 @@
 
   &:disabled {
     cursor: default;
+  }
+
+  @include tablet {
+    @include font($fs-base, $lh-xs);
+
+    min-width: 6.625rem;
+    min-height: 3.125rem;
   }
 }

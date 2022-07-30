@@ -1,0 +1,12 @@
+@import "foundation/all";
+
+.dse-avatar {
+  border-radius: 50%;
+  height: 4.375rem;
+  width: 4.375rem;
+
+  @include tablet {
+    height: 7.313rem;
+    width: 7.313rem;
+  }
+}

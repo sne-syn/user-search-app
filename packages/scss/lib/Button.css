@@ -38,7 +38,6 @@ The Space Mono font. We'll use this for the body text.
  *     https://fonts.google.com/specimen/Space+Mono
  */
 /* Font sizes */
-/* Heading font sizes */
 /* Font weights */
 /* Line Height */
 /*=====  End of Typography  ======*/
@@ -80,10 +79,7 @@ The Space Mono font. We'll use this for the body text.
 =            Body font sizes                  =
 =============================================*/
 /*=============================================
-=            Heading font sizes               =
-=============================================*/
-/*=============================================
-=            Head font weights                =
+=            Heading font weights                =
 =============================================*/
 /*=============================================
 =            Mixins                           =
@@ -110,23 +106,26 @@ body {
   font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
   font-style: normal;
   font-weight: 400;
+  min-width: 23.438rem;
 }
 
 .dse-button__container {
-  font-size: 1rem;
-  line-height: 2.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   background: var(--dse-btn-primary-bg, #0077ff);
   border: none;
   border-radius: 10px;
   color: var(--dse-btn-primary-color, white);
   cursor: pointer;
   display: flex;
-  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
-  font-style: normal;
+  font-family: inherit;
   font-weight: 700;
   justify-content: center;
-  min-width: 106px;
-  padding: 5px 0.938rem;
+  min-width: 5.25rem;
+  min-height: 2.875rem;
+  padding: 0.313rem 0.938rem;
+  align-items: center;
+  justify-content: baseline;
 }
 
 .dse-button__container:hover, .dse-button__container:disabled {
@@ -135,4 +134,13 @@ body {
 
 .dse-button__container:disabled {
   cursor: default;
+}
+
+@media (min-width: 48rem) {
+  .dse-button__container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-width: 6.625rem;
+    min-height: 3.125rem;
+  }
 }

@@ -15,12 +15,6 @@
   }
 }
 
-@mixin laptop {
-  @media (min-width: map-get($breakpoints, "lg")) {
-    @content;
-  }
-}
-
 @mixin desktop {
   @media (min-width: map-get($breakpoints, "xl")) {
     @content;

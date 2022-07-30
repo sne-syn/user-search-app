@@ -1,0 +1,10 @@
+@import "foundation/all";
+
+.dse-input {
+  margin-right: map-get($spacing, "xs");
+  width: 1.125rem;
+
+  @include tablet {
+    width: 1.25rem;
+  }
+}

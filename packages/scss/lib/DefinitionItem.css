@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-error-message {
+  font-size: 0.938rem;
+  line-height: 1.5rem;
+  color: var(--dse-btn-primary-bg-hover, #f74545);
+}

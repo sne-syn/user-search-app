@@ -33107,7 +33107,79 @@ if ("development" === 'production') {
     }
   };
 }
-},{"react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Button/Button.js":[function(require,module,exports) {
+},{"react-dom":"../../../node_modules/react-dom/index.js"}],"consts.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.iconData = exports.USER_NAME = exports.THEME = exports.TEXT = exports.NAME = exports.LABEL = exports.DEFINITION_LIST = exports.AVATAR_SRC = exports.APP_NAME = void 0;
+var AVATAR_SRC = "https://avatars.githubusercontent.com/u/583231?v=3";
+exports.AVATAR_SRC = AVATAR_SRC;
+var LABEL = "Search";
+exports.LABEL = LABEL;
+var APP_NAME = "devfinder";
+exports.APP_NAME = APP_NAME;
+var THEME = "light";
+exports.THEME = THEME;
+var NAME = "The Octocat";
+exports.NAME = NAME;
+var USER_NAME = "@octocat";
+exports.USER_NAME = USER_NAME;
+var TEXT = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
+exports.TEXT = TEXT;
+var DEFINITION_LIST = {
+  repos: 8,
+  followers: 3938,
+  following: 9
+};
+exports.DEFINITION_LIST = DEFINITION_LIST;
+var iconData = {
+  company: {
+    src: "icon-company",
+    description: "",
+    hasValue: false
+  },
+  location: {
+    src: "icon-location",
+    description: "",
+    hasValue: true
+  },
+  twitter_username: {
+    src: "icon-twitter",
+    description: "",
+    hasValue: false
+  },
+  blog: {
+    src: "icon-blog",
+    description: "",
+    hasValue: true
+  }
+};
+exports.iconData = iconData;
+},{}],"../../../node_modules/@user-search-app/react/lib/atoms/Avatar/Avatar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Avatar = ({
+  src
+}) => {
+  return _react.default.createElement("img", {
+    className: "dse-avatar",
+    src: src
+  });
+};
+
+exports.default = Avatar;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Button/Button.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33123,16 +33195,360 @@ const Button = ({
   label
 }) => {
   return _react.default.createElement("button", {
-    className: "dse-button__container"
+    className: "dse-button__container",
+    type: "submit"
   }, label);
 };
 
 exports.default = Button;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/CardSubtitle/CardSubtitle.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const CardSubtitle = ({
+  content
+}) => {
+  return _react.default.createElement("span", {
+    className: "dse-card-subtitle"
+  }, content);
+};
+
+exports.default = CardSubtitle;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/CardTitle/CardTitle.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const CardTitle = ({
+  content
+}) => {
+  return _react.default.createElement("h2", {
+    className: "dse-card-title"
+  }, content);
+};
+
+exports.default = CardTitle;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Icon/Icon.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Icon = ({
+  iconData
+}) => {
+  const transparencyClass = iconData.hasValue === false ? "dse-icon--transparent" : "";
+  return _react.default.createElement("img", {
+    className: `dse-icon ${transparencyClass}`,
+    src: `./assets/${iconData.src}.svg`,
+    alt: iconData.description
+  });
+};
+
+exports.default = Icon;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Input/Input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const Input = ({
+  query
+}) => {
+  const [value, setValue] = (0, _react.useState)(query);
+
+  const handleInputChange = evt => {
+    setValue(evt.target.value);
+  };
+
+  return _react.default.createElement("fieldset", {
+    className: "dse-input"
+  }, _react.default.createElement("label", {
+    className: "dse-visually-hidden",
+    htmlFor: "query"
+  }, "Search"), _react.default.createElement("input", {
+    className: `dse-input-field ${value ? "dse-input__field--xs" : ""}`,
+    onChange: evt => handleInputChange(evt),
+    value: value ? value : "",
+    id: "query",
+    type: "text",
+    name: "query",
+    placeholder: "Search GitHub username\u2026"
+  }));
+};
+
+exports.default = Input;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Logo/Logo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Logo = ({
+  name
+}) => {
+  return _react.default.createElement("p", {
+    className: "dse-logo"
+  }, name);
+};
+
+exports.default = Logo;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/DateInfo/DateInfo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const getHumanReadableDate = date => {
+  const dateFormatted = new Date(date);
+  const day = dateFormatted.getDay();
+  const month = dateFormatted.toLocaleString("default", {
+    month: "short"
+  });
+  const year = dateFormatted.getFullYear();
+  return `${day} ${month} ${year}`;
+};
+
+const DateInfo = ({
+  date
+}) => {
+  return _react.default.createElement("div", {
+    className: "dse-date"
+  }, _react.default.createElement("span", null, "Joined "), date && _react.default.createElement("time", {
+    dateTime: date
+  }, getHumanReadableDate(date)));
+};
+
+exports.default = DateInfo;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/DefinitionList/DefinitionList.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const DefinitionList = ({
+  list
+}) => {
+  return _react.default.createElement("dl", null, Object.keys(list).map(key => {
+    return _react.default.createElement("div", {
+      key: key
+    }, _react.default.createElement("h2", null, key, ": ", list[key]), _react.default.createElement("hr", null));
+  }));
+};
+
+exports.default = DefinitionList;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/ErrorMessage/ErrorMessage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const ErrorMessage = ({
+  content
+}) => {
+  return _react.default.createElement("h2", {
+    className: "dse-error-message"
+  }, content);
+};
+
+exports.default = ErrorMessage;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/TextBlock/TextBlock.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const TextBlock = ({
+  content
+}) => {
+  return _react.default.createElement("p", {
+    className: "dse-text"
+  }, content);
+};
+
+exports.default = TextBlock;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/assets/icon-sun.svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var img = "data:image/svg+xml,%3csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.545 6.455c-.9-.9-2.17-1.481-3.545-1.481a4.934 4.934 0 0 0-3.545 1.481c-.9.9-1.481 2.17-1.481 3.545 0 1.376.582 2.646 1.481 3.545.9.9 2.17 1.481 3.545 1.481a4.934 4.934 0 0 0 3.545-1.481c.9-.9 1.481-2.17 1.481-3.545a4.934 4.934 0 0 0-1.481-3.545zM10 3.413a.7.7 0 0 0 .688-.688V.688A.7.7 0 0 0 10 0a.7.7 0 0 0-.688.688v2.037a.7.7 0 0 0 .688.688zm5.635 1.931 1.455-1.455a.67.67 0 0 0 0-.952.67.67 0 0 0-.952 0l-1.455 1.455a.67.67 0 0 0 0 .952c.238.264.66.264.952 0zm3.677 3.968h-2.037a.7.7 0 0 0-.688.688.7.7 0 0 0 .688.688h2.037A.7.7 0 0 0 20 10a.7.7 0 0 0-.688-.688zm-3.704 5.344a.67.67 0 0 0-.952 0 .67.67 0 0 0 0 .952l1.455 1.455a.67.67 0 0 0 .952 0 .67.67 0 0 0 0-.952l-1.455-1.455zM10 16.587a.7.7 0 0 0-.688.688v2.037A.7.7 0 0 0 10 20a.7.7 0 0 0 .688-.688v-2.037a.7.7 0 0 0-.688-.688zm-5.635-1.931L2.91 16.111a.67.67 0 0 0 0 .952.67.67 0 0 0 .952 0l1.455-1.455a.67.67 0 0 0 0-.952c-.238-.264-.66-.264-.952 0zM3.413 10a.7.7 0 0 0-.688-.688H.688A.7.7 0 0 0 0 10a.7.7 0 0 0 .688.688h2.037A.7.7 0 0 0 3.413 10zm.952-4.656a.67.67 0 0 0 .952 0 .67.67 0 0 0 0-.952L3.862 2.937a.67.67 0 0 0-.952 0 .67.67 0 0 0 0 .952l1.455 1.455z' fill='white'/%3e%3c/svg%3e";
+exports.default = img;
+},{}],"../../../node_modules/@user-search-app/react/lib/assets/icon-moon.svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var img = "data:image/svg+xml,%3csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.513 11.397a.701.701 0 0 0-.588.128 7.496 7.496 0 0 1-2.276 1.336 7.101 7.101 0 0 1-2.583.462 7.505 7.505 0 0 1-5.32-2.209 7.568 7.568 0 0 1-2.199-5.342c0-.873.154-1.72.41-2.49a6.904 6.904 0 0 1 1.227-2.21.657.657 0 0 0-.102-.924.701.701 0 0 0-.589-.128C5.32.61 3.427 1.92 2.072 3.666A10.158 10.158 0 0 0 0 9.83c0 2.8 1.125 5.342 2.967 7.19a10.025 10.025 0 0 0 7.16 2.98c2.353 0 4.527-.822 6.266-2.183a10.13 10.13 0 0 0 3.58-5.624.623.623 0 0 0-.46-.796z' fill='%234B6A9B'/%3e%3c/svg%3e";
+exports.default = img;
+},{}],"../../../node_modules/@user-search-app/react/lib/atoms/ThemeToggler/ThemeToggler.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _iconSunSvg = _interopRequireDefault(require("../../assets/icon-sun.svg.js"));
+
+var _iconMoonSvg = _interopRequireDefault(require("../../assets/icon-moon.svg.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const togglerInterface = {
+  DARK: {
+    icon: _iconSunSvg.default,
+    text: "light",
+    alt: "White sun"
+  },
+  LIGHT: {
+    icon: _iconMoonSvg.default,
+    text: "dark",
+    alt: "Dark moon"
+  }
+};
+
+const ThemeToggler = ({
+  theme
+}) => {
+  const isDark = theme === "dark";
+  console.log(theme);
+  return _react.default.createElement("button", {
+    className: `dse-theme ${isDark ? "dse-theme--dark" : "dse-theme--light"}`
+  }, _react.default.createElement("span", {
+    className: "dse-theme-text"
+  }, !isDark ? togglerInterface.LIGHT.text : togglerInterface.DARK.text), _react.default.createElement("img", {
+    src: !isDark ? togglerInterface.LIGHT.icon : togglerInterface.DARK.icon,
+    alt: !isDark ? togglerInterface.LIGHT.alt : togglerInterface.DARK.alt,
+    style: {
+      width: "20px"
+    }
+  }));
+};
+
+exports.default = ThemeToggler;
+},{"react":"../../../node_modules/react/index.js","../../assets/icon-sun.svg.js":"../../../node_modules/@user-search-app/react/lib/assets/icon-sun.svg.js","../../assets/icon-moon.svg.js":"../../../node_modules/@user-search-app/react/lib/assets/icon-moon.svg.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/VisuallyHidden/VisuallyHidden.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const VisuallyHidden = ({
+  tagName,
+  content
+}) => {
+  const CustomTag = tagName;
+  return _react.default.createElement(CustomTag, {
+    className: "dse-visually-hidden"
+  }, content);
+};
+
+exports.default = VisuallyHidden;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/atoms/Wrapper/Wrapper.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Wrapper = ({
+  type,
+  children
+}) => {
+  const isAccentBlock = type === "accent";
+  return _react.default.createElement("div", {
+    className: `dse-wrapper ${isAccentBlock ? "dse-wrapper--accent" : ""}`
+  }, children);
+};
+
+exports.default = Wrapper;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@user-search-app/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
+});
+Object.defineProperty(exports, "Avatar", {
+  enumerable: true,
+  get: function () {
+    return _Avatar.default;
+  }
 });
 Object.defineProperty(exports, "Button", {
   enumerable: true,
@@ -33140,11 +33556,109 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
+Object.defineProperty(exports, "CardSubtitle", {
+  enumerable: true,
+  get: function () {
+    return _CardSubtitle.default;
+  }
+});
+Object.defineProperty(exports, "CardTitle", {
+  enumerable: true,
+  get: function () {
+    return _CardTitle.default;
+  }
+});
+Object.defineProperty(exports, "DateInfo", {
+  enumerable: true,
+  get: function () {
+    return _DateInfo.default;
+  }
+});
+Object.defineProperty(exports, "DefinitionList", {
+  enumerable: true,
+  get: function () {
+    return _DefinitionList.default;
+  }
+});
+Object.defineProperty(exports, "ErrorMessage", {
+  enumerable: true,
+  get: function () {
+    return _ErrorMessage.default;
+  }
+});
+Object.defineProperty(exports, "Icon", {
+  enumerable: true,
+  get: function () {
+    return _Icon.default;
+  }
+});
+Object.defineProperty(exports, "Input", {
+  enumerable: true,
+  get: function () {
+    return _Input.default;
+  }
+});
+Object.defineProperty(exports, "Logo", {
+  enumerable: true,
+  get: function () {
+    return _Logo.default;
+  }
+});
+Object.defineProperty(exports, "TextBlock", {
+  enumerable: true,
+  get: function () {
+    return _TextBlock.default;
+  }
+});
+Object.defineProperty(exports, "ThemeToggler", {
+  enumerable: true,
+  get: function () {
+    return _ThemeToggler.default;
+  }
+});
+Object.defineProperty(exports, "VisuallyHidden", {
+  enumerable: true,
+  get: function () {
+    return _VisuallyHidden.default;
+  }
+});
+Object.defineProperty(exports, "Wrapper", {
+  enumerable: true,
+  get: function () {
+    return _Wrapper.default;
+  }
+});
+
+var _Avatar = _interopRequireDefault(require("./atoms/Avatar/Avatar.js"));
 
 var _Button = _interopRequireDefault(require("./atoms/Button/Button.js"));
 
+var _CardSubtitle = _interopRequireDefault(require("./atoms/CardSubtitle/CardSubtitle.js"));
+
+var _CardTitle = _interopRequireDefault(require("./atoms/CardTitle/CardTitle.js"));
+
+var _Icon = _interopRequireDefault(require("./atoms/Icon/Icon.js"));
+
+var _Input = _interopRequireDefault(require("./atoms/Input/Input.js"));
+
+var _Logo = _interopRequireDefault(require("./atoms/Logo/Logo.js"));
+
+var _DateInfo = _interopRequireDefault(require("./atoms/DateInfo/DateInfo.js"));
+
+var _DefinitionList = _interopRequireDefault(require("./atoms/DefinitionList/DefinitionList.js"));
+
+var _ErrorMessage = _interopRequireDefault(require("./atoms/ErrorMessage/ErrorMessage.js"));
+
+var _TextBlock = _interopRequireDefault(require("./atoms/TextBlock/TextBlock.js"));
+
+var _ThemeToggler = _interopRequireDefault(require("./atoms/ThemeToggler/ThemeToggler.js"));
+
+var _VisuallyHidden = _interopRequireDefault(require("./atoms/VisuallyHidden/VisuallyHidden.js"));
+
+var _Wrapper = _interopRequireDefault(require("./atoms/Wrapper/Wrapper.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@user-search-app/react/lib/atoms/Button/Button.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Avatar/Avatar.js":"../../../node_modules/@user-search-app/react/lib/atoms/Avatar/Avatar.js","./atoms/Button/Button.js":"../../../node_modules/@user-search-app/react/lib/atoms/Button/Button.js","./atoms/CardSubtitle/CardSubtitle.js":"../../../node_modules/@user-search-app/react/lib/atoms/CardSubtitle/CardSubtitle.js","./atoms/CardTitle/CardTitle.js":"../../../node_modules/@user-search-app/react/lib/atoms/CardTitle/CardTitle.js","./atoms/Icon/Icon.js":"../../../node_modules/@user-search-app/react/lib/atoms/Icon/Icon.js","./atoms/Input/Input.js":"../../../node_modules/@user-search-app/react/lib/atoms/Input/Input.js","./atoms/Logo/Logo.js":"../../../node_modules/@user-search-app/react/lib/atoms/Logo/Logo.js","./atoms/DateInfo/DateInfo.js":"../../../node_modules/@user-search-app/react/lib/atoms/DateInfo/DateInfo.js","./atoms/DefinitionList/DefinitionList.js":"../../../node_modules/@user-search-app/react/lib/atoms/DefinitionList/DefinitionList.js","./atoms/ErrorMessage/ErrorMessage.js":"../../../node_modules/@user-search-app/react/lib/atoms/ErrorMessage/ErrorMessage.js","./atoms/TextBlock/TextBlock.js":"../../../node_modules/@user-search-app/react/lib/atoms/TextBlock/TextBlock.js","./atoms/ThemeToggler/ThemeToggler.js":"../../../node_modules/@user-search-app/react/lib/atoms/ThemeToggler/ThemeToggler.js","./atoms/VisuallyHidden/VisuallyHidden.js":"../../../node_modules/@user-search-app/react/lib/atoms/VisuallyHidden/VisuallyHidden.js","./atoms/Wrapper/Wrapper.js":"../../../node_modules/@user-search-app/react/lib/atoms/Wrapper/Wrapper.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -33211,7 +33725,85 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@user-search-app/scss/lib/Button.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@user-search-app/scss/lib/Avatar.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/Button.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/CardSubtitle.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/CardTitle.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/DefinitionList.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/ErrorMessage.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/Icon.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/Input.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/Logo.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/DateInfo.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/TextBlock.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/ThemeToggler.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/VisuallyHidden.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@user-search-app/scss/lib/Wrapper.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -33224,18 +33816,75 @@ var _react = _interopRequireDefault(require("react"));
 
 var _client = require("react-dom/client");
 
+var _consts = require("./consts");
+
 var _react2 = require("@user-search-app/react");
 
+require("@user-search-app/scss/lib/Avatar.css");
+
 require("@user-search-app/scss/lib/Button.css");
+
+require("@user-search-app/scss/lib/CardSubtitle.css");
+
+require("@user-search-app/scss/lib/CardTitle.css");
+
+require("@user-search-app/scss/lib/DefinitionList.css");
+
+require("@user-search-app/scss/lib/ErrorMessage.css");
+
+require("@user-search-app/scss/lib/Icon.css");
+
+require("@user-search-app/scss/lib/Input.css");
+
+require("@user-search-app/scss/lib/Logo.css");
+
+require("@user-search-app/scss/lib/DateInfo.css");
+
+require("@user-search-app/scss/lib/TextBlock.css");
+
+require("@user-search-app/scss/lib/ThemeToggler.css");
+
+require("@user-search-app/scss/lib/VisuallyHidden.css");
+
+require("@user-search-app/scss/lib/Wrapper.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var container = document.querySelector("#root");
 var root = (0, _client.createRoot)(container);
-root.render(_react.default.createElement(_react2.Button, {
-  label: "Search"
-}));
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@user-search-app/react":"../../../node_modules/@user-search-app/react/lib/index.js","@user-search-app/scss/lib/Button.css":"../../../node_modules/@user-search-app/scss/lib/Button.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+root.render(_react.default.createElement("div", null, _react.default.createElement(_react2.Wrapper, {
+  type: "main"
+}, _react.default.createElement(_react2.Avatar, {
+  src: _consts.AVATAR_SRC
+}), _react.default.createElement(_react2.Button, {
+  label: _consts.LABEL
+}), _react.default.createElement(_react2.Input, {
+  query: null
+}), _react.default.createElement(_react2.CardTitle, {
+  content: _consts.NAME
+}), _react.default.createElement(_react2.CardSubtitle, {
+  content: _consts.USER_NAME
+}), _react.default.createElement(_react2.Icon, {
+  iconData: _consts.iconData.location
+}), _react.default.createElement(_react2.Logo, {
+  name: _consts.APP_NAME
+}), _react.default.createElement(_react2.DateInfo, {
+  date: "2008-01-14T04:33:35Z"
+}), _react.default.createElement(_react2.DefinitionList, {
+  list: _consts.DEFINITION_LIST
+}), _react.default.createElement(_react2.ErrorMessage, {
+  content: "No results"
+}), _react.default.createElement(_react2.ThemeToggler, {
+  theme: _consts.THEME
+}), _react.default.createElement(_react2.VisuallyHidden, {
+  tagName: "h1",
+  content: "A GitHub user search app"
+}), _react.default.createElement(_react2.Wrapper, {
+  type: "accent"
+}, _react.default.createElement(_react2.TextBlock, {
+  content: _consts.TEXT
+})))));
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","./consts":"consts.ts","@user-search-app/react":"../../../node_modules/@user-search-app/react/lib/index.js","@user-search-app/scss/lib/Avatar.css":"../../../node_modules/@user-search-app/scss/lib/Avatar.css","@user-search-app/scss/lib/Button.css":"../../../node_modules/@user-search-app/scss/lib/Button.css","@user-search-app/scss/lib/CardSubtitle.css":"../../../node_modules/@user-search-app/scss/lib/CardSubtitle.css","@user-search-app/scss/lib/CardTitle.css":"../../../node_modules/@user-search-app/scss/lib/CardTitle.css","@user-search-app/scss/lib/DefinitionList.css":"../../../node_modules/@user-search-app/scss/lib/DefinitionList.css","@user-search-app/scss/lib/ErrorMessage.css":"../../../node_modules/@user-search-app/scss/lib/ErrorMessage.css","@user-search-app/scss/lib/Icon.css":"../../../node_modules/@user-search-app/scss/lib/Icon.css","@user-search-app/scss/lib/Input.css":"../../../node_modules/@user-search-app/scss/lib/Input.css","@user-search-app/scss/lib/Logo.css":"../../../node_modules/@user-search-app/scss/lib/Logo.css","@user-search-app/scss/lib/DateInfo.css":"../../../node_modules/@user-search-app/scss/lib/DateInfo.css","@user-search-app/scss/lib/TextBlock.css":"../../../node_modules/@user-search-app/scss/lib/TextBlock.css","@user-search-app/scss/lib/ThemeToggler.css":"../../../node_modules/@user-search-app/scss/lib/ThemeToggler.css","@user-search-app/scss/lib/VisuallyHidden.css":"../../../node_modules/@user-search-app/scss/lib/VisuallyHidden.css","@user-search-app/scss/lib/Wrapper.css":"../../../node_modules/@user-search-app/scss/lib/Wrapper.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33263,7 +33912,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59681" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59696" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

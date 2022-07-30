@@ -20,4 +20,5 @@ body {
   font-family: $body-font-family;
   font-style: normal;
   font-weight: $fw-normal;
+  min-width: map-get($breakpoints, "xs");
 }

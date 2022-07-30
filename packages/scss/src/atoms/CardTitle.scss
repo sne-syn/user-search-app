@@ -1,0 +1,12 @@
+@import "foundation/all";
+
+.dse-card-title {
+  @include font($fs-base, $lh-xs);
+
+  color: $ebony-clay-logo;
+  font-weight: $fw-bold;
+
+  @include tablet {
+    @include font($fs-xl, $lh-xl);
+  }
+}

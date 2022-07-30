@@ -1,0 +1,10 @@
+@import "foundation/all";
+
+.dse-date {
+  @include font($fs-xxs, $lh-micro);
+  color: $lynch;
+
+  @include tablet {
+    @include font($fs-sm, $lh-xs);
+  }
+}

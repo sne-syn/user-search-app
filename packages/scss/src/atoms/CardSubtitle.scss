@@ -1,0 +1,11 @@
+@import "foundation/all";
+
+.dse-card-subtitle {
+  @include font($fs-xxs, $lh-micro);
+  color: $blue;
+  display: block;
+
+  @include tablet {
+    @include font($fs-base, $lh-xs);
+  }
+}

@@ -1,0 +1,11 @@
+@import "foundation/all";
+
+.dse-text {
+  @include font($fs-xxs, $lh-sm);
+
+  color: $body-text-color;
+
+  @include tablet {
+    font-size: $fs-sm;
+  }
+}

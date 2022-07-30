@@ -38,7 +38,6 @@ The Space Mono font. We'll use this for the body text.
  *     https://fonts.google.com/specimen/Space+Mono
  */
 /* Font sizes */
-/* Heading font sizes */
 /* Font weights */
 /* Line Height */
 /*=====  End of Typography  ======*/
@@ -80,10 +79,7 @@ The Space Mono font. We'll use this for the body text.
 =            Body font sizes                  =
 =============================================*/
 /*=============================================
-=            Heading font sizes               =
-=============================================*/
-/*=============================================
-=            Head font weights                =
+=            Heading font weights                =
 =============================================*/
 /*=============================================
 =            Mixins                           =
@@ -110,23 +106,150 @@ body {
   font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
   font-style: normal;
   font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-avatar {
+  border-radius: 50%;
+  height: 4.375rem;
+  width: 4.375rem;
+}
+
+@media (min-width: 48rem) {
+  .dse-avatar {
+    height: 7.313rem;
+    width: 7.313rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
 }
 
 .dse-button__container {
-  font-size: 1rem;
-  line-height: 2.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   background: var(--dse-btn-primary-bg, #0077ff);
   border: none;
   border-radius: 10px;
   color: var(--dse-btn-primary-color, white);
   cursor: pointer;
   display: flex;
-  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
-  font-style: normal;
+  font-family: inherit;
   font-weight: 700;
   justify-content: center;
-  min-width: 106px;
-  padding: 5px 0.938rem;
+  min-width: 5.25rem;
+  min-height: 2.875rem;
+  padding: 0.313rem 0.938rem;
+  align-items: center;
+  justify-content: baseline;
 }
 
 .dse-button__container:hover, .dse-button__container:disabled {
@@ -135,6 +258,1414 @@ body {
 
 .dse-button__container:disabled {
   cursor: default;
+}
+
+@media (min-width: 48rem) {
+  .dse-button__container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-width: 6.625rem;
+    min-height: 3.125rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-card-subtitle {
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  color: #0077ff;
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .dse-card-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-card-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #212630;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .dse-card-title {
+    font-size: 1.625rem;
+    line-height: 2.438rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-definition-list {
+  font-size: 0.938rem;
+  line-height: 1.5rem;
+  color: var(--dse-btn-primary-bg-hover, #f74545);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-error-message {
+  font-size: 0.938rem;
+  line-height: 1.5rem;
+  color: var(--dse-btn-primary-bg-hover, #f74545);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-icon {
+  margin-right: 0.75rem;
+  width: 1.125rem;
+}
+
+.dse-icon__empty {
+  filter: invert(97%) sepia(24%) saturate(6563%) hue-rotate(175deg) brightness(86%) contrast(83%);
+}
+
+@media (min-width: 48rem) {
+  .dse-icon {
+    width: 1.25rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-input {
+  margin-right: 0.75rem;
+  width: 1.125rem;
+}
+
+@media (min-width: 48rem) {
+  .dse-input {
+    width: 1.25rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-logo {
+  font-size: 1.625rem;
+  line-height: 2.438rem;
+  font-weight: 700;
+  color: #212630;
+}
+
+@media (min-width: 48rem) {
+  .dse-logo {
+    line-height: 2.375rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-date {
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  color: #697c9b;
+}
+
+@media (min-width: 48rem) {
+  .dse-date {
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-text {
+  font-size: 0.813rem;
+  line-height: 1.563rem;
+  color: var(--dse-body-text-color, #4b699b);
+}
+
+@media (min-width: 48rem) {
+  .dse-text {
+    font-size: 0.938rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-theme {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  align-items: center;
+  outline-offset: 0.188rem;
+}
+
+.dse-theme-text {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: 700;
+  letter-spacing: 0.156rem;
+  margin-right: 0.594rem;
+}
+
+.dse-theme--light {
+  color: #4b699b;
+}
+
+.dse-theme--light:hover {
+  filter: brightness(0) saturate(100%);
+}
+
+.dse-theme--dark {
+  color: white;
+}
+
+.dse-theme--dark:hover {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(7423%) hue-rotate(185deg) brightness(87%) contrast(90%);
+}
+
+.dse-visually-hidden,
+.dse-visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/* Font families */
+/**
+The Space Mono font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Space+Mono
+ */
+/* Font sizes */
+/* Font weights */
+/* Line Height */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Themed colors               =
+=============================================*/
+/* Dark Theme */
+/* Light Theme */
+/*=============================================
+=                 Shared                     =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  box-sizing: inherit;
+  font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
+  font-style: normal;
+  font-weight: 400;
+  min-width: 23.438rem;
+}
+
+.dse-wrapper {
+  background-color: var(--dse-card-bg-color, white);
+  border-radius: 10px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+  padding: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .dse-wrapper {
+    padding: 2.5rem;
+  }
+}
+
+.dse-wrapper--accent {
+  background-color: var(--dse-body-bg-color, #f5f7ff);
+  padding: 0.938rem;
+}
+
+@media (min-width: 48rem) {
+  .dse-wrapper--accent {
+    padding: 2.5rem;
+  }
 }
 
 

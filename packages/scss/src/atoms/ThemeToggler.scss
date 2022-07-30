@@ -1,0 +1,37 @@
+@import "foundation/all";
+
+.dse-theme {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  align-items: center;
+  outline-offset: 0.188rem;
+
+  &-text {
+    @include font($fs-xxs, $lh-xxs);
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: $fw-bold;
+    letter-spacing: 0.156rem;
+    margin-right: map-get($spacing, "xxs");
+  }
+
+  &--light {
+    color: $kashmir-blue;
+
+    &:hover {
+      filter: brightness(0) saturate(100%);
+    }
+  }
+
+  &--dark {
+    color: $white;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(7423%)
+        hue-rotate(185deg) brightness(87%) contrast(90%);
+    }
+  }
+}

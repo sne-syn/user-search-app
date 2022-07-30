@@ -1,0 +1,21 @@
+@import "foundation/all";
+
+.dse-wrapper {
+  background-color: $card-bg-color;
+  border-radius: $border-radius;
+  filter: $box-shadow;
+  padding: 1.25rem;
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  &--accent {
+    background-color: $body-bg-color;
+    padding: 0.938rem;
+
+    @include tablet {
+      padding: 2.5rem;
+    }
+  }
+}

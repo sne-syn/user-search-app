@@ -1,0 +1,12 @@
+@import "foundation/all";
+
+.dse-logo {
+  @include font($fs-xl, $lh-xl);
+
+  font-weight: $fw-bold;
+  color: $ebony-clay-logo;
+
+  @include tablet {
+    line-height: $lh-lg;
+  }
+}

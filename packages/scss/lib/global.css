@@ -49,7 +49,6 @@ The Space Mono font. We'll use this for the body text.
  *     https://fonts.google.com/specimen/Space+Mono
  */
 /* Font sizes */
-/* Heading font sizes */
 /* Font weights */
 /* Line Height */
 /*=====  End of Typography  ======*/
@@ -91,10 +90,7 @@ The Space Mono font. We'll use this for the body text.
 =            Body font sizes                  =
 =============================================*/
 /*=============================================
-=            Heading font sizes               =
-=============================================*/
-/*=============================================
-=            Head font weights                =
+=            Heading font weights                =
 =============================================*/
 /*=============================================
 =            Mixins                           =
@@ -121,6 +117,7 @@ body {
   font-family: var(--dse-body-font-family, "Space Mono", "Courier New", Courier, monospace);
   font-style: normal;
   font-weight: 400;
+  min-width: 23.438rem;
 }
 
 /*=============================================
@@ -592,6 +589,8 @@ template {
   --dse-body-text-color: #4b699b;
   --dse-body-bg-color: #f5f7ff;
   --dse-card-bg-color: white;
+  --dse-logo-text-color: #212630
+
   --dse-btn-primary-bg-hover: #f74545;
   --dse-btn-primary-color: white;
   --dse-btn-primary-bg: #0077ff;
@@ -599,18 +598,15 @@ template {
   --dse-body-font-family: Space Mono, Courier New, Courier, monospace;
   --dse-body-font-size: 0.938rem;
   --dse-body-font-weight: 400;
-  --dse-h1-font-size: 1.625rem;
-  --dse-h2-font-size: 1.375rem;
-  --dse-h3-font-size: 1rem;
-  --dse-h4-font-size: 0.813rem;
   --dse-h1-text-weight: 700;
   --dse-h2-text-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --dse-body-bg-dark-color: #141d2e;
-    --dse-body-text-dark-color: white;
-    --dse-card-bg-dark-color: #1e2b48;
+    --dse-body-bg-color: #141d2e;
+    --dse-body-text-color: white;
+    --dse-card-bg-color: #1e2b48;
+    --dse-card-text-color: white;
   }
 }

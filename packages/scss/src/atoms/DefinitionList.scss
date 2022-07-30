@@ -1,0 +1,6 @@
+@import "foundation/all";
+
+.dse-definition-list {
+  @include font($fs-sm, $lh-xs);
+  color: $body-error-text-color;
+}
