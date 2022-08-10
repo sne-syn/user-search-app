@@ -10,6 +10,7 @@
 
 # production
 /build
+/.css
 
 # Avoid accidental upload of the Sketch and Figma design files
 #####################################################
