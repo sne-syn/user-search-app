@@ -61,6 +61,7 @@ The Space Mono font. We'll use this for the body text.
 $space-mono: "Space Mono", "Courier New", Courier, monospace;
 
 /* Font sizes */
+$fs-micro: 0.688rem; // 11px
 $fs-xxs: 0.813rem; // 13px
 $fs-xs: 0.875rem; // 14px
 $fs-sm: 0.938rem; // 15px
@@ -74,8 +75,9 @@ $fw-normal: 400;
 $fw-bold: 700;
 
 /* Line Height */
+$lh-base: 1rem; // 16px
 $lh-micro: 1.188rem; // 19px
-$lh-xxs: 1.25rem; // 20p22p
+$lh-xxs: 1.25rem; // 20px
 $lh-xs: 1.5rem; // 24px
 $lh-sm: 1.563rem; // 25px
 $lh-md: 2.063rem; // 33px

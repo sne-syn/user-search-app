@@ -1,6 +1,35 @@
 @import "foundation/all";
 
-.dse-definition-list {
-  @include font($fs-sm, $lh-xs);
-  color: $body-error-text-color;
+.dse-definitions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+
+  .dse-definition {
+    &__term {
+      @include font($fs-micro, $lh-base);
+      text-align: center;
+      color: $body-text-color;
+
+      @include tablet {
+        @include font($fs-xxs, $lh-micro);
+        text-align: left;
+      }
+    }
+
+    &__desc {
+      @include font($fs-base, $lh-xs);
+      font-weight: $fw-bold;
+      color: $definition-text-color;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+
+      @include tablet {
+        @include font($fs-lg, $lh-md);
+        text-align: left;
+      }
+    }
+  }
 }

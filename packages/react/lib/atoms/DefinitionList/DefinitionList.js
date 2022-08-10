@@ -1,13 +1,11 @@
 import React from 'react';
 
 const DefinitionList = ({ list }) => {
-    return (React.createElement("dl", null, Object.keys(list).map((key) => {
-        return (React.createElement("div", { key: key },
-            React.createElement("h2", null,
-                key,
-                ": ",
-                list[key]),
-            React.createElement("hr", null)));
+    const capitalizeChar = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+    return (React.createElement("dl", { className: "dse-definitions" }, Object.keys(list).map((key) => {
+        return (React.createElement("div", { key: key, className: "dse-definition" },
+            React.createElement("dt", { className: "dse-definition__term" }, capitalizeChar(key)),
+            React.createElement("dd", { className: "dse-definition__desc" }, list[key])));
     })));
 };
 

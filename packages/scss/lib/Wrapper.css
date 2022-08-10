@@ -132,3 +132,7 @@ body {
     padding: 2.5rem;
   }
 }
+
+.dse-wrapper--pointer {
+  cursor: pointer;
+}

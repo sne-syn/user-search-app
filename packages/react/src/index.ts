@@ -4,6 +4,7 @@ import CardSubtitle from "./atoms/CardSubtitle";
 import CardTitle from "./atoms/CardTitle";
 import Icon from "./atoms/Icon";
 import Input from "./atoms/Input";
+import Link from "./atoms/Link";
 import Logo from "./atoms/Logo";
 import DateInfo from "./atoms/DateInfo";
 import DefinitionList from "./atoms/DefinitionList";
@@ -20,6 +21,7 @@ export {
   CardTitle,
   Icon,
   Input,
+  Link,
   Logo,
   DateInfo,
   DefinitionList,

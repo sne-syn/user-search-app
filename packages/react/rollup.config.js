@@ -10,6 +10,7 @@ export default {
     "src/atoms/CardTitle/index.ts",
     "src/atoms/Icon/index.ts",
     "src/atoms/Input/index.ts",
+    "src/atoms/Link/index.ts",
     "src/atoms/DefinitionList/index.ts",
     "src/atoms/DateInfo/index.ts",
     "src/atoms/Logo/index.ts",

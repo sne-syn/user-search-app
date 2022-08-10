@@ -18,6 +18,7 @@ import {
   CardTitle,
   Icon,
   Input,
+  Link,
   Logo,
   DateInfo,
   DefinitionList,
@@ -35,6 +36,7 @@ import "@user-search-app/scss/lib/DefinitionList.css";
 import "@user-search-app/scss/lib/ErrorMessage.css";
 import "@user-search-app/scss/lib/Icon.css";
 import "@user-search-app/scss/lib/Input.css";
+import "@user-search-app/scss/lib/Link.css";
 import "@user-search-app/scss/lib/Logo.css";
 import "@user-search-app/scss/lib/DateInfo.css";
 import "@user-search-app/scss/lib/TextBlock.css";
@@ -46,17 +48,21 @@ const container = document.querySelector("#root");
 const root = createRoot(container!);
 root.render(
   <div>
+    <Wrapper type="main" interactive={true}>
+      <Input query={null} />
+      <Button label={LABEL} />
+    </Wrapper>
     <Wrapper type="main">
       <Avatar src={AVATAR_SRC} />
-      <Button label={LABEL} />
-      <Input query={null} />
       <CardTitle content={NAME} />
       <CardSubtitle content={USER_NAME} />
       <Icon iconData={iconData.location} />
+      <Link link={null} />
       <Logo name={APP_NAME} />
-      <DateInfo date="2008-01-14T04:33:35Z" />
-      {/* finish */}
-      <DefinitionList list={DEFINITION_LIST} />
+      <DateInfo date="2008-01-14T04:33:35Z" />{" "}
+      <Wrapper type="accent">
+        <DefinitionList list={DEFINITION_LIST} />
+      </Wrapper>
       <ErrorMessage content="No results" />
       <ThemeToggler theme={THEME} />
       <VisuallyHidden tagName="h1" content="A GitHub user search app" />

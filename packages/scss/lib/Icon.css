@@ -114,8 +114,8 @@ body {
   width: 1.125rem;
 }
 
-.dse-icon__empty {
-  filter: invert(97%) sepia(24%) saturate(6563%) hue-rotate(175deg) brightness(86%) contrast(83%);
+.dse-icon--transparent {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(24%) saturate(6563%) hue-rotate(175deg) brightness(86%) contrast(83%);
 }
 
 @media (min-width: 48rem) {

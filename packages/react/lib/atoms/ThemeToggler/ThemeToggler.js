@@ -16,7 +16,6 @@ const togglerInterface = {
 };
 const ThemeToggler = ({ theme }) => {
     const isDark = theme === "dark";
-    console.log(theme);
     return (React.createElement("button", { className: `dse-theme ${isDark ? "dse-theme--dark" : "dse-theme--light"}` },
         React.createElement("span", { className: "dse-theme-text" }, !isDark ? togglerInterface.LIGHT.text : togglerInterface.DARK.text),
         React.createElement("img", { src: !isDark ? togglerInterface.LIGHT.icon : togglerInterface.DARK.icon, alt: !isDark ? togglerInterface.LIGHT.alt : togglerInterface.DARK.alt, style: { width: "20px" } })));

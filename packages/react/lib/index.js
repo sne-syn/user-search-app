@@ -4,6 +4,7 @@ export { default as CardSubtitle } from './atoms/CardSubtitle/CardSubtitle.js';
 export { default as CardTitle } from './atoms/CardTitle/CardTitle.js';
 export { default as Icon } from './atoms/Icon/Icon.js';
 export { default as Input } from './atoms/Input/Input.js';
+export { default as Link } from './atoms/Link/Link.js';
 export { default as Logo } from './atoms/Logo/Logo.js';
 export { default as DateInfo } from './atoms/DateInfo/DateInfo.js';
 export { default as DefinitionList } from './atoms/DefinitionList/DefinitionList.js';

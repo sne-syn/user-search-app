@@ -6,7 +6,7 @@ interface IconProps {
 
 const Icon: FC<IconProps> = ({ iconData }) => {
   const transparencyClass =
-    iconData.hasValue === false ? "dse-icon--transparent" : "";
+    iconData.hasValue === true ? "dse-icon--transparent" : "";
 
   return (
     <img

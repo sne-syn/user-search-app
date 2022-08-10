@@ -1,4 +1,5 @@
 import React, { useState, FC } from "react";
+import searchIcon from "../../assets/icon-search.svg";
 
 interface InputProps {
   query: string | null;
@@ -12,12 +13,15 @@ const Input: FC<InputProps> = ({ query }) => {
   };
 
   return (
-    <fieldset className="dse-input">
+    <fieldset className="dse-fieldset">
+      <img className="dse-fieldset__icon" src={searchIcon} alt="Search user" />
       <label className="dse-visually-hidden" htmlFor="query">
         Search
       </label>
       <input
-        className={`dse-input-field ${value ? "dse-input__field--xs" : ""}`}
+        className={`dse-fieldset__input ${
+          value ? "dse-fieldset__input--xs" : ""
+        }`}
         onChange={(evt) => handleInputChange(evt)}
         value={value ? value : ""}
         id="query"

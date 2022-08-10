@@ -5,16 +5,16 @@ interface DefinitionListProps {
 }
 
 const DefinitionList: FC<DefinitionListProps> = ({ list }) => {
+  const capitalizeChar = (str: string): string =>
+    str.charAt(0).toUpperCase() + str.slice(1);
+
   return (
-    <dl>
+    <dl className="dse-definitions">
       {Object.keys(list).map((key) => {
         return (
-          <div key={key}>
-            <h2>
-              {key}: {list[key]}
-            </h2>
-
-            <hr />
+          <div key={key} className="dse-definition">
+            <dt className="dse-definition__term">{capitalizeChar(key)}</dt>
+            <dd className="dse-definition__desc">{list[key]}</dd>
           </div>
         );
       })}

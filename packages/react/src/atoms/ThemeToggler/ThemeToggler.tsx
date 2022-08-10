@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import sunIcon from "../../assets/icon-sun.svg";
 import moonIcon from "../../assets/icon-moon.svg";
+
 const togglerInterface = {
   DARK: {
     icon: sunIcon,
@@ -20,7 +21,7 @@ interface ThemeTogglerProps {
 
 const ThemeToggler: FC<ThemeTogglerProps> = ({ theme }) => {
   const isDark = theme === "dark";
-  console.log(theme);
+
   return (
     <button
       className={`dse-theme ${isDark ? "dse-theme--dark" : "dse-theme--light"}`}
