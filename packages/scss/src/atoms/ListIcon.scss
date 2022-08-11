@@ -3,6 +3,7 @@
 .dse-list-icon {
   margin-right: map-get($spacing, "xs");
   width: 1.125rem;
+  height: fit-content;
 
   &--transparent {
     filter: brightness(0) saturate(100%) invert(97%) sepia(24%) saturate(6563%)
@@ -10,6 +11,6 @@
   }
 
   @include tablet {
-    width: 1.25rem;
+    width: $lh-xxs;
   }
 }
