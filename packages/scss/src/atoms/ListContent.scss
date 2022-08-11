@@ -1,5 +1,22 @@
 @import "foundation/all";
 
 .dse-list-content {
-  @include font($fs-xl, $lh-xl);
+  @include font($fs-xxs, $lh-xxs);
+  color: $body-text-color;
+
+  @include tablet {
+    @include font($fs-sm, 1.375rem);
+  }
+
+  &--link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--transparent {
+    opacity: 0.5;
+  }
 }

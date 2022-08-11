@@ -8,20 +8,25 @@ interface ListContentProps {
 const ListContent: FC<ListContentProps> = ({ content, isLink }) => {
   const contentDescription = content ? content : "Not available";
   const href = isLink && content ? content : "";
+  const contentClass = `dse-list-content ${
+    !content ? "dse-list-content--transparent" : ""
+  }`;
 
   return (
-    <div className="dse-list-content">
-      {isLink ? (
+    <div>
+      {isLink && content ? (
         <a
           href={href}
-          className="dse-list-content__link"
+          className={`${contentClass} dse-list-content--link`}
           target="_blank"
           rel="noreferrer"
         >
           {contentDescription}
         </a>
       ) : (
-        <p className="dse-list-content__link">{contentDescription}</p>
+        <p className={`${contentClass}  dse-list-content--text`}>
+          {contentDescription}
+        </p>
       )}
     </div>
   );
