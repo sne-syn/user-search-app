@@ -129,3 +129,10 @@ $box-shadow: drop-shadow(0 4px 4px hsla(0, 0%, 0%, 0.2));
 
 $border-radius: 10px;
 /*=====  End of Spacing  ======*/
+
+$width: (
+  min: 20.438rem,
+  // 327px
+  max: 45.625rem,
+  // 730px
+) !default;

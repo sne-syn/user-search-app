@@ -18,6 +18,8 @@ export default {
     "src/atoms/ThemeToggler/index.ts",
     "src/atoms/VisuallyHidden/index.ts",
     "src/atoms/Wrapper/index.ts",
+    "src/molecules/Header/index.ts",
+    "src/molecules/ListItem/index.ts",
   ],
   output: {
     dir: "lib",

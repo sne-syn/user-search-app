@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import sunIcon from "../../assets/icon-sun.svg";
 import moonIcon from "../../assets/icon-moon.svg";
 
@@ -16,22 +16,43 @@ const togglerInterface = {
 };
 
 interface ThemeTogglerProps {
-  theme: string;
+  defaultTheme: "dark" | "light";
 }
 
-const ThemeToggler: FC<ThemeTogglerProps> = ({ theme }) => {
-  const isDark = theme === "dark";
+const ThemeToggler: FC<ThemeTogglerProps> = ({ defaultTheme }) => {
+  const [themeButton, setThemeButton] = useState(defaultTheme);
+
+  const handleThemeButtonChange = () => {
+    if (themeButton === "dark") {
+      setThemeButton("light");
+    } else {
+      setThemeButton("dark");
+    }
+  };
 
   return (
     <button
-      className={`dse-theme ${isDark ? "dse-theme--dark" : "dse-theme--light"}`}
+      className={`dse-theme ${
+        themeButton === "dark" ? "dse-theme--dark" : "dse-theme--light"
+      }`}
+      onClick={handleThemeButtonChange}
     >
       <span className="dse-theme-text">
-        {!isDark ? togglerInterface.LIGHT.text : togglerInterface.DARK.text}
+        {themeButton !== "dark"
+          ? togglerInterface.LIGHT.text
+          : togglerInterface.DARK.text}
       </span>
       <img
-        src={!isDark ? togglerInterface.LIGHT.icon : togglerInterface.DARK.icon}
-        alt={!isDark ? togglerInterface.LIGHT.alt : togglerInterface.DARK.alt}
+        src={
+          themeButton !== "dark"
+            ? togglerInterface.LIGHT.icon
+            : togglerInterface.DARK.icon
+        }
+        alt={
+          themeButton !== "dark"
+            ? togglerInterface.LIGHT.alt
+            : togglerInterface.DARK.alt
+        }
         style={{ width: "20px" }}
       />
     </button>
