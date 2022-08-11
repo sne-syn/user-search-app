@@ -1,0 +1,15 @@
+@import "foundation/all";
+
+.dse-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-width: map-get($width, "min");
+
+  @include tablet {
+    padding-left: 38px;
+    padding-right: 38px;
+    max-width: map-get($width, "max");
+  }
+}
