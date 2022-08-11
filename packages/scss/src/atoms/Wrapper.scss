@@ -13,6 +13,7 @@
   &--accent {
     background-color: $body-bg-color;
     padding: 0.938rem;
+    filter: none;
 
     @include tablet {
       padding: 2.5rem;

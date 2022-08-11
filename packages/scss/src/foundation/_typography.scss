@@ -18,10 +18,3 @@ $body-font-family: var(--dse-body-font-family, $space-mono) !default;
 
 $body-font-size: var(--dse-body-font-size, $fs-sm) !default;
 $body-font-weight: var(--dse-body-font-weight, $fw-normal) !default;
-
-/*=============================================
-=            Heading font weights                =
-=============================================*/
-
-$h-1-font-weight: var(--dse-h1-text-weight, $fw-bold) !default;
-$h-2-font-weight: var(--dse-h2-text-weight, $fw-bold) !default;

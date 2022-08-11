@@ -2,9 +2,9 @@ import Avatar from "./atoms/Avatar";
 import Button from "./atoms/Button";
 import CardSubtitle from "./atoms/CardSubtitle";
 import CardTitle from "./atoms/CardTitle";
-import Icon from "./atoms/Icon";
 import Input from "./atoms/Input";
-import Link from "./atoms/Link";
+import ListContent from "./atoms/ListContent";
+import ListIcon from "./atoms/ListIcon";
 import Logo from "./atoms/Logo";
 import DateInfo from "./atoms/DateInfo";
 import DefinitionList from "./atoms/DefinitionList";
@@ -19,9 +19,9 @@ export {
   Button,
   CardSubtitle,
   CardTitle,
-  Icon,
   Input,
-  Link,
+  ListContent,
+  ListIcon,
   Logo,
   DateInfo,
   DefinitionList,

@@ -16,9 +16,9 @@ import {
   Button,
   CardSubtitle,
   CardTitle,
-  Icon,
   Input,
-  Link,
+  ListContent,
+  ListIcon,
   Logo,
   DateInfo,
   DefinitionList,
@@ -34,9 +34,9 @@ import "@user-search-app/scss/lib/CardSubtitle.css";
 import "@user-search-app/scss/lib/CardTitle.css";
 import "@user-search-app/scss/lib/DefinitionList.css";
 import "@user-search-app/scss/lib/ErrorMessage.css";
-import "@user-search-app/scss/lib/Icon.css";
+import "@user-search-app/scss/lib/ListIcon.css";
 import "@user-search-app/scss/lib/Input.css";
-import "@user-search-app/scss/lib/Link.css";
+import "@user-search-app/scss/lib/ListContent.css";
 import "@user-search-app/scss/lib/Logo.css";
 import "@user-search-app/scss/lib/DateInfo.css";
 import "@user-search-app/scss/lib/TextBlock.css";
@@ -56,10 +56,11 @@ root.render(
       <Avatar src={AVATAR_SRC} />
       <CardTitle content={NAME} />
       <CardSubtitle content={USER_NAME} />
-      <Icon iconData={iconData.location} />
-      <Link link={null} />
+      <ListIcon iconData={iconData.location} />
+      <ListContent content="http://localhost:3000/" isLink={true} />
+      <ListContent content="San Francisco" isLink={false} />
       <Logo name={APP_NAME} />
-      <DateInfo date="2008-01-14T04:33:35Z" />{" "}
+      <DateInfo date="2008-01-14T04:33:35Z" />
       <Wrapper type="accent">
         <DefinitionList list={DEFINITION_LIST} />
       </Wrapper>

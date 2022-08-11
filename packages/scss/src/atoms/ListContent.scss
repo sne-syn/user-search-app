@@ -1,0 +1,5 @@
+@import "foundation/all";
+
+.dse-list-content {
+  @include font($fs-xl, $lh-xl);
+}

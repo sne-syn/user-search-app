@@ -1,20 +1,20 @@
 import React, { FC } from "react";
 
-interface IconProps {
+interface ListIconProps {
   iconData: { src: string; description: string; hasValue: boolean | null };
 }
 
-const Icon: FC<IconProps> = ({ iconData }) => {
+const ListIcon: FC<ListIconProps> = ({ iconData }) => {
   const transparencyClass =
-    iconData.hasValue === true ? "dse-icon--transparent" : "";
+    iconData.hasValue === true ? "dse-list-icon--transparent" : "";
 
   return (
     <img
-      className={`dse-icon ${transparencyClass}`}
+      className={`dse-list-icon ${transparencyClass}`}
       src={`./assets/${iconData.src}.svg`}
       alt={iconData.description}
     />
   );
 };
 
-export default Icon;
+export default ListIcon;
