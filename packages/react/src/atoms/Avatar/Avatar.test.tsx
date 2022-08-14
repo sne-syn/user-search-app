@@ -2,8 +2,17 @@ import React from "react";
 import Avatar from "./Avatar";
 import { render, screen } from "@testing-library/react";
 const SRC = "https://avatars.githubusercontent.com/u/583231?v=3";
-test("renders avatar", () => {
-  render(<Avatar src={SRC} />);
-  expect(screen.findByTestId("avatar")).toBeInTheDocument;
-  expect(screen.findByTestId("avatar")).toMatchSnapshot;
+
+describe("Avatar", () => {
+  test("renders avatar", () => {
+    render(<Avatar src={SRC} />);
+    expect(screen.getByTestId("avatar")).toBeInTheDocument;
+    expect(screen.getByTestId("avatar")).toMatchSnapshot();
+  });
+
+  test("renders avatar with style provided", () => {
+    render(<Avatar src={SRC} style={{ width: "100px" }} />);
+    expect(screen.getByTestId("avatar")).toHaveStyle("width: 100px");
+    expect(screen.getByTestId("avatar")).toMatchSnapshot();
+  });
 });

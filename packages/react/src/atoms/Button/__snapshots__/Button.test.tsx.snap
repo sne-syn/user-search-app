@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button was rendered 1`] = `
+<button
+  class="dse-button__container"
+  type="button"
+>
+  Send
+</button>
+`;
+
+exports[`Button was rendered disabled and didn't allow the 'click' event 1`] = `
+<button
+  class="dse-button__container"
+  disabled=""
+  type="button"
+>
+  Send
+</button>
+`;
+
+exports[`Button was rendered with style provided 1`] = `
+<button
+  class="dse-button__container"
+  style="width: 100px;"
+  type="button"
+>
+  Send
+</button>
+`;

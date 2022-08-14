@@ -12,6 +12,7 @@ const Avatar: FC<AvatarProps> = ({ src, alt, style }) => {
       className="dse-avatar"
       src={src}
       alt={alt ? alt : "User's avatar"}
+      data-testid="avatar"
     />
   );
 };
