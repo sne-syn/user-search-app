@@ -4,7 +4,7 @@
   @include font($fs-xl, $lh-xl);
 
   font-weight: $fw-bold;
-  color: $ebony-clay-logo;
+  color: $logo-text-color;
 
   @include tablet {
     line-height: $lh-lg;

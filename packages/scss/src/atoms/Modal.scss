@@ -1,0 +1,58 @@
+@import "foundation/all";
+
+.dse-modal {
+  position: fixed;
+  top: map-get($spacing, "xxxs");
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 50%;
+
+  &--mobile {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  &__contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 map-get($spacing, "xxs");
+    padding-left: map-get($spacing, "sm");
+  }
+
+  &__button {
+    border: none;
+
+    background-color: inherit;
+    width: map-get($spacing, "md");
+    height: map-get($spacing, "md");
+  }
+
+  @include tablet {
+    display: none;
+
+    &--tablet {
+      display: block;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

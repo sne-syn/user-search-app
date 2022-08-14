@@ -1,0 +1,15 @@
+@import "foundation/all";
+
+.dse-card-list {
+  list-style: none;
+  margin: map-get($spacing, "none");
+  padding: map-get($spacing, "none");
+
+  & > * {
+    margin-bottom: map-get($spacing, "base");
+
+    @include tablet {
+      margin-bottom: map-get($spacing, "sm");
+    }
+  }
+}

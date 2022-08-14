@@ -1,0 +1,22 @@
+@import "foundation/all";
+
+.dse-search-bar {
+  display: flex;
+  align-items: center;
+  padding: map-get($spacing, "xxs");
+  padding-right: map-get($spacing, "xxs");
+  padding-left: 1.25rem;
+
+  @include tablet {
+    padding: map-get($spacing, "xs");
+    padding-left: 2.5rem;
+  }
+
+  &__error {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}

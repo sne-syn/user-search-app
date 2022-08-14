@@ -1,0 +1,16 @@
+@import "foundation/all";
+
+.dse-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: map-get($spacing, "none");
+  padding: map-get($spacing, "none");
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include tablet {
+    width: 50%;
+  }
+}

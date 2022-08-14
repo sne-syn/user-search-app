@@ -1,18 +1,19 @@
 import React, { FC } from "react";
 
 interface ListIconProps {
-  iconData: { src: string; description: string; hasValue: boolean | null };
+  src: string;
+  alt: string;
+  isTransparent?: boolean;
 }
 
-const ListIcon: FC<ListIconProps> = ({ iconData }) => {
-  const transparencyClass =
-    iconData.hasValue === true ? "dse-list-icon--transparent" : "";
+const ListIcon: FC<ListIconProps> = ({ src, alt, isTransparent }) => {
+  const transparencyClass = isTransparent ? "dse-list-icon--transparent" : "";
 
   return (
     <img
       className={`dse-list-icon ${transparencyClass}`}
-      src={`./assets/${iconData.src}.svg`}
-      alt={iconData.description}
+      src={`./assets/${src}.svg`}
+      alt={alt}
     />
   );
 };

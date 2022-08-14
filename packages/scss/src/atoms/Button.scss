@@ -1,11 +1,11 @@
 @import "foundation/all";
 
 .dse-button__container {
-  @include font($fs-xs, $lh-xxs);
+  @include font($fs-xs, $lh-base);
 
   background: $btn-primary-bg;
   border: none;
-  border-radius: $border-radius;
+  border-radius: $border-radius-btn;
   color: $btn-primary-color;
   cursor: pointer;
   display: flex;
@@ -14,7 +14,7 @@
   justify-content: center;
   min-width: 5.25rem;
   min-height: 2.875rem;
-  padding: 0.313rem map-get($spacing, "sm");
+  padding: map-get($spacing, "sm");
   align-items: center;
   justify-content: baseline;
 

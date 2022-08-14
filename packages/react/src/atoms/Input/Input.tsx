@@ -1,17 +1,12 @@
-import React, { useState, FC } from "react";
+import React, { FC } from "react";
 import searchIcon from "../../assets/icon-search.svg";
 
 interface InputProps {
   query: string | null;
+  handleInputChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: FC<InputProps> = ({ query }) => {
-  const [value, setValue] = useState<string | null>(query);
-
-  const handleInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(evt.target.value);
-  };
-
+const Input: FC<InputProps> = ({ query, handleInputChange }) => {
   return (
     <fieldset className="dse-fieldset">
       <img className="dse-fieldset__icon" src={searchIcon} alt="Search user" />
@@ -20,10 +15,10 @@ const Input: FC<InputProps> = ({ query }) => {
       </label>
       <input
         className={`dse-fieldset__input ${
-          value ? "dse-fieldset__input--xs" : ""
+          query ? "dse-fieldset__input--xs" : ""
         }`}
         onChange={(evt) => handleInputChange(evt)}
-        value={value ? value : ""}
+        value={query ? query : ""}
         id="query"
         type="text"
         name="query"

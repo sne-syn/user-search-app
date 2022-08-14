@@ -3,7 +3,7 @@
 .dse-card-title {
   @include font($fs-base, $lh-xs);
 
-  color: $ebony-clay-logo;
+  color: $logo-text-color;
   font-weight: $fw-bold;
 
   @include tablet {

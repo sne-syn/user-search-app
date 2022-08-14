@@ -13,7 +13,7 @@ export const DEFINITION_LIST = {
 };
 
 export const iconData = {
-  company: { src: "icon-company", description: "", hasValue: false },
+  company: { src: "icon-company", description: "Company", hasValue: false },
   location: { src: "icon-location", description: "", hasValue: true },
   twitter_username: { src: "icon-twitter", description: "", hasValue: false },
   blog: { src: "icon-blog", description: "", hasValue: true },

@@ -15,7 +15,7 @@
     color: inherit;
     font-weight: $fw-bold;
     letter-spacing: 0.156rem;
-    margin-right: map-get($spacing, "xxs");
+    margin-right: map-get($spacing, "base");
   }
 
   &--light {

@@ -121,13 +121,14 @@ $spacing: (
   // 32px
   lg: 2.74rem,
   // 44px
-  xl: 3rem,
-  // 48px
+  xl: 3.125rem,
+  // 50px
 ) !default;
 
 $box-shadow: drop-shadow(0 4px 4px hsla(0, 0%, 0%, 0.2));
 
-$border-radius: 10px;
+$border-radius: 16px;
+$border-radius-btn: 10px;
 /*=====  End of Spacing  ======*/
 
 $width: (

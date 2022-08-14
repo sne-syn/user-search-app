@@ -13,23 +13,29 @@
 =============================================*/
 
 /* Dark Theme */
-$body-text-dark-color: var(--dse-body-text-dark-color, $white) !default;
-$body-bg-dark-color: var(--dse-body-bg-dark-color, $big-stone) !default;
-$card-bg-dark-color: var(--dse-card-bg-dark-color, $cloud-burst) !default;
-$logo-text-dark-color: var(--dse-logo-text-dark-color, $white) !default;
-$definition-text-dark-color: var(--dse-logo-text-dark-color, $white) !default;
+$body-text-color-dark: var(--dse-body-text-dark-color, $white) !default;
+$body-bg-color-dark: var(--dse-body-bg-dark-color, $big-stone) !default;
+$card-bg-color-dark: var(--dse-card-bg-dark-color, $cloud-burst) !default;
+$logo-text-color-dark: var(--dse-logo-text-dark-color, $white) !default;
+$definition-text-color-dark: var(
+  --dse-definition-text-dark-color,
+  $white
+) !default;
+$date-text-color-dark: var(--dse-date-text-dark-color, $white) !default;
 
 /* Light Theme */
 $body-text-color: var(--dse-body-text-color, $kashmir-blue) !default;
 $body-bg-color: var(--dse-body-bg-color, $white-dark) !default;
 $card-bg-color: var(--dse-card-bg-color, $white) !default;
 $logo-text-color: var(--dse-logo-text-color, $ebony-clay-logo) !default;
-$definition-text-color: var(--dse-logo-text-color, $ebony-clay) !default;
+$definition-text-color: var(--dse-definition-text-color, $ebony-clay) !default;
+$date-text-color: var(--dse-date-text-dark-color, $lynch) !default;
 
 /*=============================================
 =                 Shared                     =
 =============================================*/
 
+$brand-color: var(--dse-btn-primary-bg, $blue) !default;
 $icon-empty-color: var(--dse-icon-empty-color, $kashmir-blue) !default;
 $body-error-text-color: var(--dse-btn-primary-bg-hover, $red) !default;
 $btn-primary-bg: var(--dse-btn-primary-bg, $blue) !default;

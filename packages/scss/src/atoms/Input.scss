@@ -2,6 +2,8 @@
 
 .dse-fieldset {
   border: 0;
+  margin: map-get($spacing, "none");
+  padding: map-get($spacing, "none");
   display: flex;
   align-items: center;
   margin-right: map-get($spacing, "xs");
@@ -24,11 +26,14 @@
 
     border: 0;
     color: $body-text-color;
+    caret-color: $brand-color;
     display: block;
+    outline: none;
     outline-offset: 0.188rem;
     position: relative;
     margin-left: 0.313rem;
     width: -webkit-fill-available;
+    background-color: inherit;
 
     @include tablet {
       font-size: 1.125rem;

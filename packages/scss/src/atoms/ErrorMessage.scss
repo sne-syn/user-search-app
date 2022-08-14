@@ -1,6 +1,12 @@
 @import "foundation/all";
 
 .dse-error-message {
-  @include font($fs-sm, $lh-xs);
+  @include font($fs-micro, $lh-xs);
   color: $body-error-text-color;
+  padding-right: map-get($spacing, "xs");
+  cursor: default;
+
+  @include tablet {
+    @include font($fs-sm, $lh-xs);
+  }
 }

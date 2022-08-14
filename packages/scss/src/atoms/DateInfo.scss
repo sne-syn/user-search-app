@@ -2,7 +2,7 @@
 
 .dse-date {
   @include font($fs-xxs, $lh-micro);
-  color: $lynch;
+  color: $date-text-color;
 
   @include tablet {
     @include font($fs-sm, $lh-xs);
