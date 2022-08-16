@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList renders card list 1`] = `
+<ul
+  class="dse-card-list"
+  data-testid="card-list"
+>
+  <li>
+    item
+  </li>
+</ul>
+`;
+
+exports[`CardList renders card list with style provided 1`] = `
+<ul
+  class="dse-card-list"
+  data-testid="card-list"
+  style="width: 100px;"
+>
+  <li>
+    item
+  </li>
+</ul>
+`;

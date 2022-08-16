@@ -2,18 +2,20 @@
 
 exports[`Avatar renders avatar 1`] = `
 <img
-  alt="User's avatar"
+  alt=""
   class="dse-avatar"
   data-testid="avatar"
+  role="img"
   src="https://avatars.githubusercontent.com/u/583231?v=3"
 />
 `;
 
 exports[`Avatar renders avatar with style provided 1`] = `
 <img
-  alt="User's avatar"
+  alt=""
   class="dse-avatar"
   data-testid="avatar"
+  role="img"
   src="https://avatars.githubusercontent.com/u/583231?v=3"
   style="width: 100px;"
 />

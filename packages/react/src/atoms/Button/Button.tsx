@@ -2,10 +2,10 @@ import React, { FC } from "react";
 
 interface ButtonProps {
   label: string;
+  type?: "submit" | "button";
+  disabled?: boolean;
   style?: React.CSSProperties;
   handleClick?: () => void;
-  disabled?: boolean;
-  type?: "submit" | "button";
 }
 
 const Button: FC<ButtonProps> = ({

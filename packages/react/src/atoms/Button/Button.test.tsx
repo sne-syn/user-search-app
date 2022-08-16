@@ -22,7 +22,7 @@ describe("Button", () => {
     expect(handleClick).toBeCalledTimes(1);
   });
 
-  test("was rendered disabled and didn't allow the 'click' event", () => {
+  test("is disabled", () => {
     render(<Button label="Send" handleClick={handleClick} disabled={true} />);
     expect(screen.getByRole("button")).toBeDisabled();
     expect(screen.getByRole("button")).toMatchSnapshot();

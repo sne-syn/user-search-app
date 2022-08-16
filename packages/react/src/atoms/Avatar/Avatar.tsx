@@ -2,16 +2,18 @@ import React, { FC } from "react";
 
 interface AvatarProps {
   src: string;
-  alt?: string;
+  alt: string;
+  role?: "presentation" | "img";
   style?: React.CSSProperties;
 }
-const Avatar: FC<AvatarProps> = ({ src, alt, style }) => {
+const Avatar: FC<AvatarProps> = ({ src, alt, style, role = "img" }) => {
   return (
     <img
       style={style}
       className="dse-avatar"
       src={src}
-      alt={alt ? alt : "User's avatar"}
+      alt={alt}
+      role={role}
       data-testid="avatar"
     />
   );
