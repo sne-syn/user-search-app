@@ -129,6 +129,7 @@ $box-shadow: drop-shadow(0 4px 4px hsla(0, 0%, 0%, 0.2));
 
 $border-radius: 16px;
 $border-radius-btn: 10px;
+$border-radius-rounded: 50%;
 /*=====  End of Spacing  ======*/
 
 $width: (
@@ -137,3 +138,11 @@ $width: (
   max: 45.625rem,
   // 730px
 ) !default;
+
+$avatar-size: 4.375rem;
+$avatar-size-tablet: 7.313rem;
+
+$btn-width: 5.25rem;
+$btn-height: 2.875rem;
+$btn-width-tablet: 6.625rem;
+$btn-height-tablet: 3.125rem;

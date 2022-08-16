@@ -33,3 +33,8 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+@mixin minSize($min-width, $min-height) {
+  min-width: $min-width;
+  min-height: $min-height;
+}

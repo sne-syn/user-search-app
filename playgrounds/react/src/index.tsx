@@ -69,7 +69,7 @@ root.render(
       <SearchBar handleSubmit={() => console.log()} error="No results" />
       <VisuallyHidden tagName="h1" content="A GitHub user search app" />
       <Wrapper type="main" padded={true}>
-        <Avatar src={AVATAR_SRC} />
+        <Avatar src={AVATAR_SRC} alt="User" />
         <CardTitle content={NAME} />
         <CardSubtitle content={USER_NAME} />
         <ListContent content="" isLink={true} />

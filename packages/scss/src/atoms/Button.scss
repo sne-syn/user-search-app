@@ -2,7 +2,9 @@
 
 .dse-button__container {
   @include font($fs-xs, $lh-base);
+  @include minSize($btn-width, $btn-height);
 
+  align-items: center;
   background: $btn-primary-bg;
   border: none;
   border-radius: $border-radius-btn;
@@ -12,11 +14,7 @@
   font-family: inherit;
   font-weight: $fw-bold;
   justify-content: center;
-  min-width: 5.25rem;
-  min-height: 2.875rem;
   padding: map-get($spacing, "sm");
-  align-items: center;
-  justify-content: baseline;
 
   &:hover,
   &:disabled {
@@ -29,8 +27,6 @@
 
   @include tablet {
     @include font($fs-base, $lh-xs);
-
-    min-width: 6.625rem;
-    min-height: 3.125rem;
+    @include minSize($btn-width-tablet, $btn-height-tablet);
   }
 }

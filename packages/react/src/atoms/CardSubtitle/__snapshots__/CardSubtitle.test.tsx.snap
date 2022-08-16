@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSubtitle renders with custom text color provided 1`] = `
+<span
+  class="dse-card-subtitle"
+  data-testid="card-subtitle"
+  style="color: blue;"
+>
+  Test CardSubtitle
+</span>
+`;
+
+exports[`CardSubtitle renders with style provided 1`] = `
+<span
+  class="dse-card-subtitle"
+  data-testid="card-subtitle"
+  style="background-color: black;"
+>
+  Test CardSubtitle
+</span>
+`;
+
+exports[`CardSubtitle renders with text content 1`] = `
+<span
+  class="dse-card-subtitle"
+  data-testid="card-subtitle"
+>
+  Test CardSubtitle
+</span>
+`;
