@@ -18,7 +18,7 @@ const Input: FC<InputProps> = ({ query, handleInputChange }) => {
           query ? "dse-fieldset__input--xs" : ""
         }`}
         onChange={(evt) => handleInputChange(evt)}
-        value={query ? query : ""}
+        value={query || ""}
         id="query"
         type="text"
         name="query"

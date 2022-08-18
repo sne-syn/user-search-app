@@ -4,6 +4,7 @@
   @include font($fs-base, $lh-xs);
 
   color: $logo-text-color;
+  display: block;
   font-weight: $fw-bold;
 
   @include tablet {

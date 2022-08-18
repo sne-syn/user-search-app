@@ -6,7 +6,7 @@ interface ListContentProps {
 }
 
 const ListContent: FC<ListContentProps> = ({ content, isLink }) => {
-  const contentDescription = content ? content : "Not available";
+  const contentDescription = content || "Not available";
   const href = isLink && content ? content : "";
   const contentClass = `dse-list-content ${
     !content ? "dse-list-content--transparent" : ""
