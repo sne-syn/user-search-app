@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefinitionList renders with date on human readable format 1`] = `
+<dl
+  class="dse-definitions"
+  data-testid="definition-list"
+>
+  <div
+    class="dse-definition"
+    data-testid="definition-item"
+  >
+    <dt
+      class="dse-definition__term"
+    >
+      Books
+    </dt>
+    <dd
+      class="dse-definition__desc"
+    >
+      8
+    </dd>
+  </div>
+  <div
+    class="dse-definition"
+    data-testid="definition-item"
+  >
+    <dt
+      class="dse-definition__term"
+    >
+      Followers
+    </dt>
+    <dd
+      class="dse-definition__desc"
+    >
+      3938
+    </dd>
+  </div>
+  <div
+    class="dse-definition"
+    data-testid="definition-item"
+  >
+    <dt
+      class="dse-definition__term"
+    >
+      Readers
+    </dt>
+    <dd
+      class="dse-definition__desc"
+    >
+      9
+    </dd>
+  </div>
+</dl>
+`;

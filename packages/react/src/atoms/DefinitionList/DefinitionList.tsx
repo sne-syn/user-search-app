@@ -9,10 +9,14 @@ const DefinitionList: FC<DefinitionListProps> = ({ list }) => {
     str.charAt(0).toUpperCase() + str.slice(1);
 
   return (
-    <dl className="dse-definitions">
+    <dl className="dse-definitions" data-testid="definition-list">
       {Object.keys(list).map((key) => {
         return (
-          <div key={key} className="dse-definition">
+          <div
+            key={key}
+            className="dse-definition"
+            data-testid="definition-item"
+          >
             <dt className="dse-definition__term">{capitalizeChar(key)}</dt>
             <dd className="dse-definition__desc">{list[key]}</dd>
           </div>

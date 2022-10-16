@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInfo doesn't render if the date is absent 1`] = `null`;
+
+exports[`DateInfo renders with date on human readable format 1`] = `
+<div
+  class="dse-date"
+  data-testid="date-info"
+>
+  <span>
+    Joined 
+  </span>
+  <time
+    datetime="2008-01-14T04:33:35Z"
+  >
+    1 Jan 2008
+  </time>
+</div>
+`;

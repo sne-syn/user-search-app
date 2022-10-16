@@ -15,10 +15,14 @@ const getHumanReadableDate = (date: string): string => {
 
 const DateInfo: FC<DateInfoProps> = ({ date }) => {
   return (
-    <div className="dse-date">
-      <span>Joined </span>
-      {date && <time dateTime={date}>{getHumanReadableDate(date)}</time>}
-    </div>
+    <>
+      {date && (
+        <div className="dse-date" data-testid="date-info">
+          <span>Joined </span>
+          <time dateTime={date}>{getHumanReadableDate(date)}</time>
+        </div>
+      )}
+    </>
   );
 };
 
